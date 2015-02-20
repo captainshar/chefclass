@@ -18,9 +18,11 @@ describe "apache" do
     expect(service("httpd")).to be_running
   end
 
-# TODO: test for port 80 being open, and contents of home page
-#  it "has port 80 open" do
-#  end
+# test for port 80 being open
+  it "has port 80 open" do
+    expect(port(80)).to be_listening
+  end
 
+# TODO: Test content of web page
 
 end
